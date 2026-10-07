@@ -1,0 +1,16 @@
+[Unit]
+Description=Local HTTP proxy (Mihomo, no TUN)
+
+[Service]
+Type=simple
+WorkingDirectory=%h/mihomo
+ExecStart=%h/mihomo/bin/mihomo -d %h/mihomo/private -f %h/mihomo/private/config.yaml
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=20
+UMask=0077
+StandardOutput=append:%h/mihomo/private/proxy.log
+StandardError=append:%h/mihomo/private/proxy.log
+
+[Install]
+WantedBy=default.target

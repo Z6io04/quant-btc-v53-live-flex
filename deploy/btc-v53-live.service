@@ -1,0 +1,22 @@
+[Unit]
+Description=v53 OKX real-money execution (explicit live arming required)
+Wants=mihomo-proxy.service
+After=mihomo-proxy.service
+
+[Service]
+Type=simple
+WorkingDirectory=%h/btc-v53-live
+ExecStart=/usr/bin/python3 -u %h/btc-v53-live/launch.py run
+Environment=PYTHONUNBUFFERED=1
+Environment=TZ=Asia/Shanghai
+Restart=on-failure
+RestartSec=30
+KillSignal=SIGTERM
+TimeoutStopSec=90
+UMask=0077
+NoNewPrivileges=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

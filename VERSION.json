@@ -1,0 +1,25 @@
+{
+  "name": "btc-v53-live",
+  "version": "1.1.0-live-flex.1",
+  "prepared_on": "2026-10-07",
+  "mode": "live",
+  "default_armed": false,
+  "account_files_included": false,
+  "release_scope": "clean installation after verified retirement of unused original v53; no arbitrary ledger reset",
+  "capital_policy": "initial assigned capital plus manually verified USDT transfers; no fixed cumulative principal cap",
+  "default_initial_capital_usdt": 30,
+  "default_max_loss_usdt": 30,
+  "isolated_leverage": 15,
+  "fixed_strategy": "original frozen v53; leverage and risk ratios unchanged",
+  "max_capital_audit_gap_days": 5,
+  "server_modified": false,
+  "live_account_tested": false,
+  "safety_scope": "offline evidence only; actual protective stop and execution lifecycle require account verification",
+  "offline_tests": {
+    "count": 390,
+    "result": "passed",
+    "python": "3.12.14",
+    "platform": "macOS",
+    "network_and_orders": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "mode": "live",
+  "instrument": "BTC-USDT-SWAP",
+  "origin": "https://openapi.okx.com",
+  "proxy": "http://127.0.0.1:17890",
+  "capital_usdt": 30,
+  "leverage": 15,
+  "max_loss_usdt": 30,
+  "risk": 0.06,
+  "max_notional_multiple": 5,
+  "reserve": 0.5,
+  "fee": 0.0005,
+  "slip": 0.0003,
+  "halt_dd": 0.6,
+  "cooldown_hours": 6,
+  "poll_seconds": 10,
+  "signal_ttl_seconds": 90,
+  "quote_age_seconds": 5,
+  "warmup_days": 14
+}
